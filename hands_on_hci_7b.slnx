@@ -1,0 +1,5 @@
+﻿<Solution>
+  <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="OldMovieFx.Runtime.csproj" />
+  <Project Path="OldMovieFx.Editor.csproj" />
+</Solution>
