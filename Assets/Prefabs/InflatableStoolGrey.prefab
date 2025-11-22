@@ -1,0 +1,187 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2043474770372179013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2132667290933880656}
+  - component: {fileID: 5739283149538173360}
+  - component: {fileID: 744288043275175925}
+  m_Layer: 0
+  m_Name: inflatable_stool_green_bottom_inflatable_stool_green_bottom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2132667290933880656
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043474770372179013}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.21, y: 0.121, z: 0}
+  m_LocalScale: {x: 0.7827927, y: 1.4749999, z: 0.7827927}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2108579012103790150}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &5739283149538173360
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043474770372179013}
+  m_Mesh: {fileID: -2464428557675281107, guid: e9fe4307f2a5ce44eab0188d1c4b675d, type: 3}
+--- !u!23 &744288043275175925
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043474770372179013}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: ff43030d865ce9e44b28bae11e3fd3e0, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &2955889112219180715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2108579012103790150}
+  m_Layer: 0
+  m_Name: InflatableStoolGrey
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2108579012103790150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2955889112219180715}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.82, y: 0.8, z: 0.82}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6130259209993747729}
+  - {fileID: 2132667290933880656}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &5951989837417618170
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2108579012103790150}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 34b9ee35969e66e46bf69d56a69241f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.66839933
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 34b9ee35969e66e46bf69d56a69241f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 34b9ee35969e66e46bf69d56a69241f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.38034946
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 34b9ee35969e66e46bf69d56a69241f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.83233494
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 34b9ee35969e66e46bf69d56a69241f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.017779997
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 34b9ee35969e66e46bf69d56a69241f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5538615
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 34b9ee35969e66e46bf69d56a69241f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.011831361
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 34b9ee35969e66e46bf69d56a69241f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -2.447
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 34b9ee35969e66e46bf69d56a69241f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -67.282
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 34b9ee35969e66e46bf69d56a69241f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34b9ee35969e66e46bf69d56a69241f5, type: 3}
+      propertyPath: m_Name
+      value: inflatable_stool_grey_style_transfer
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34b9ee35969e66e46bf69d56a69241f5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 34b9ee35969e66e46bf69d56a69241f5, type: 3}
+--- !u!4 &6130259209993747729 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 34b9ee35969e66e46bf69d56a69241f5, type: 3}
+  m_PrefabInstance: {fileID: 5951989837417618170}
+  m_PrefabAsset: {fileID: 0}
