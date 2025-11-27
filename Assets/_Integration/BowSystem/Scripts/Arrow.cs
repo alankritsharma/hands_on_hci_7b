@@ -75,9 +75,10 @@ public class Arrow : MonoBehaviour
         TargetZone target = collision.collider.GetComponent<TargetZone>();
         if (target != null)
         {
-            ScoreManager.Instance.RegisterHit(hitPoint, target);
+            ScoreManager.Instance.RegisterHit(this, hitPoint);
             target.OnArrowHit(hitPoint);
         }
+
 
         // 3. Destroy/Return after delay
         Invoke(nameof(ReturnArrow), lifetimeAfterHit);
@@ -116,7 +117,7 @@ public class Arrow : MonoBehaviour
     }
 
     //----------------------------------------------
-    private void ReturnArrow()
+    public void ReturnArrow()
     {
         if (trailRenderer != null)
             trailRenderer.enabled = false;
