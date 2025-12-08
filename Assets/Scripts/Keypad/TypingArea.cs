@@ -18,7 +18,7 @@ public class TypingArea : MonoBehaviour
         }
         else if (hand == rightHand)
         {
-            rightHand.SetActive(true);
+            rightTypingHand.SetActive(true);
         }
     }
 
@@ -33,7 +33,7 @@ public class TypingArea : MonoBehaviour
         }
         else if (hand == rightHand)
         {
-            rightHand.SetActive(false);
+            rightTypingHand.SetActive(false);
         }
     }
 }
