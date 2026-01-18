@@ -16,19 +16,48 @@ public class KeypadButton : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        keypad = GetComponentInParent<Keypad>();
+        keypad = GetComponentInParent<Keypad>(true);
         buttonText = GetComponentInChildren<TextMeshProUGUI>();
 
-        if (buttonText.text.Length == 1)
+        if (gameObject.name.Length == 1)
         {
             nameToButtonText();
-            GetComponentInChildren<ButtonVR>().onRelease.AddListener(delegate { keypad.AddDigit(buttonText.text); });
+            GetComponentInChildren<ButtonVR>(true).onRelease.AddListener(delegate {
+                if (keypad != null)
+                {
+                    keypad.AddDigit(gameObject.name);
+                }
+                else
+                {
+                    Debug.Log("NULL KEYPAD");
+                }
+            });
         }
-        else if (buttonText.text == "Clear") {
-        
+        else if (gameObject.name == "clear") {
+            GetComponentInChildren<ButtonVR>(true).onRelease.AddListener(delegate
+            {
+                if (keypad != null)
+                {
+                    keypad.ClearCode();
+                }
+                else
+                {
+                    Debug.Log("NULL KEYPAD");
+                }
+            });
         }
-        else if (buttonText.text == "Enter")  {
-        
+        else if (gameObject.name == "enter")  {
+            GetComponentInChildren<ButtonVR>(true).onRelease.AddListener(delegate
+            {
+                if (keypad != null)
+                {
+                    keypad.CheckCode();
+                }
+                else
+                {
+                    Debug.Log("NULL KEYPAD");
+                }
+            });
         }
     }
 }

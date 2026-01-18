@@ -14,10 +14,12 @@ public class TypingArea : MonoBehaviour
             return;
         if (hand == leftHand)
         {
+            Debug.Log("Left hand is active!");
             leftTypingHand.SetActive(true);
         }
         else if (hand == rightHand)
         {
+            Debug.Log("Right hand is active!");
             rightTypingHand.SetActive(true);
         }
     }

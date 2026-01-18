@@ -25,8 +25,9 @@ public class ButtonVR : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!isPressed)
+        if (!isPressed && gameObject.name != other.name)
         {
+            Debug.Log($"Trigger on {gameObject.name}, other: {other.name}");
             button.transform.localPosition = new Vector3(0, 0.003f, 0);
             presser = other.gameObject;
             onPress.Invoke();
@@ -43,14 +44,6 @@ public class ButtonVR : MonoBehaviour
             onRelease.Invoke();
             isPressed = false;
         }
-    }
-
-    public void SpawnSphere()
-    {
-        GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        sphere.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-        sphere.transform.localPosition = new Vector3(0, 1, 2);
-        sphere.AddComponent<Rigidbody>();
     }
 
 }

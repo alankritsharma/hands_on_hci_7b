@@ -7,13 +7,15 @@ public enum LightState
 {
     OFF,
     FAILED,
-    PASS
+    PASS,
+    FINISH
 }
 
 public class Keypad : MonoBehaviour
 {
 
     public int rounds = 3;
+    public int delaySeconds = 3;
     private string correctCode;
     private int setLen = 4;
     private string inputCode;
@@ -57,27 +59,31 @@ public class Keypad : MonoBehaviour
             if (rounds > 0)
             {
                 rounds--;
-                yield return new WaitForSeconds(3);
-                Reset();
             }
         }
         else
         {
             Debug.Log("Wrong passcode!");
-            yield return new WaitForSeconds(3);
             ChangeLightColor(LightState.FAILED);
         }
+        yield return new WaitForSeconds(delaySeconds);
+        Reset();
+        //if (rounds == 0)
+        //{
+        //    Debug.Log("Quitting application! Goodbye!");
+        //    Application.Quit();
+        //}
     }
 
     public void CheckCode()
     {
+        Debug.Log($"Current code: {inputCode}");
         StartCoroutine(waiter());
     }
 
     private void ChangeLightColor(LightState state)
     {
         Color newColor;
-        Material newMaterial = new Material(Shader.Find("Universal Render Pipeline/Lit"));
         switch (state) {
             case LightState.OFF:
                 newColor = Color.grey;
@@ -95,9 +101,8 @@ public class Keypad : MonoBehaviour
                 newColor = Color.grey;
                 break;
         }
-        newMaterial.color = newColor;
         MeshRenderer gameObjectRenderer = lightBulb.GetComponent<MeshRenderer>();
-        gameObjectRenderer.material = newMaterial;
+        gameObjectRenderer.material.color = newColor;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -135,6 +140,8 @@ public class Keypad : MonoBehaviour
             stickyNoteText = stickyNote.GetComponentInChildren<TextMeshProUGUI>();
             stickyNoteText.text = correctCode;
         }
+
+        ClearCode();
     }
 
     private void Reset()
